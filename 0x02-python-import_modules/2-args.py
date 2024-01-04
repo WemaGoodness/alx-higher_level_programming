@@ -7,14 +7,14 @@ def main():
     num_args = len(args) - 1
 
     if num_args == 0:
-        print("Number of arguments: 0.")
+        print("0 arguments.".format())
     elif num_args == 1:
-        print(f"Number of argument: 1:")
+        print("1 argument:".format())
     else:
-        print(f"Number of arguments: {num_args}:")
+        print("{:d} arguments:".format(num_args))
 
     for i in range(1, len(args)):
-        print(f"{i}: {args[i]}")
+        print("{:d}: {}".format(i, args[i]))
 
 
 if __name__ == "__main__":
