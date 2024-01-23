@@ -3,10 +3,10 @@
 
 
 class Square:
-    """This class represents a square with private instance attributes size and position"""
+    """A class representING a square with PrIA size & position"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """This method initializes the square with a given size and position"""
+        """This method initializes the square with a given size & position"""
         self.size = size
         self.position = position
 
@@ -50,4 +50,8 @@ class Square:
             print()
         else:
             print("\n" * self.__position[1], end="")
-            print("\n".join([" " * self.__position[0] + "#" * self.__size for _ in range(self.__size)]))
+            lines = [
+                    " " * self.__position[0] + "#" * self.__size
+                    for _ in range(self.__size)
+                    ]
+            print("\n".join(lines))
