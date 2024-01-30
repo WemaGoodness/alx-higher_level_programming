@@ -1,0 +1,14 @@
+"""
+This is a test file for the function text_indentation in the module.
+"""
+
+def test_text_indentation():
+    """
+    This function tests the text_indentation function.
+    """
+    import my_module
+    assert my_module.text_indentation("Hello. How are you? Good: I'm glad.") == "Hello.\n\nHow are you?\n\nGood:\n\nI'm glad."
+    try:
+        my_module.text_indentation(123)
+    except TypeError as e:
+        assert str(e) == "text must be a string"

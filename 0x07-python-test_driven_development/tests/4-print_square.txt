@@ -1,0 +1,18 @@
+"""
+This is a test file for the function print_square in the module.
+"""
+
+def test_print_square():
+    """
+    This function tests the print_square function.
+    """
+    import my_module
+    assert my_module.print_square(5) == "#####\n#####\n#####\n#####\n#####\n"
+    try:
+        my_module.print_square(-1)
+    except ValueError as e:
+        assert str(e) == "size must be >= 0"
+    try:
+        my_module.print_square(1.5)
+    except TypeError as e:
+        assert str(e) == "size must be an integer"

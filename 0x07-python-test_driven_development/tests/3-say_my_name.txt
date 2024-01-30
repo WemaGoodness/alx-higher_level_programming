@@ -1,0 +1,19 @@
+"""
+This is a test file for the function say_my_name in the module.
+"""
+
+def test_say_my_name():
+    """
+    This function tests the say_my_name function.
+    """
+    import my_module
+    assert my_module.say_my_name("John", "Doe") == "My name is John Doe"
+    assert my_module.say_my_name("John") == "My name is John "
+    try:
+        my_module.say_my_name(123, "Doe")
+    except TypeError as e:
+        assert str(e) == "first_name must be a string"
+    try:
+        my_module.say_my_name("John", 123)
+    except TypeError as e:
+        assert str(e) == "last_name must be a string"
