@@ -1,0 +1,9 @@
+>>> from my_module import add_integer
+>>> add_integer(1, 2)
+3
+>>> add_integer(100.1, 200.2)
+300
+>>> add_integer("100", 200)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
